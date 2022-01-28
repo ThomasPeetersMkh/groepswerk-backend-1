@@ -1,2 +1,4 @@
+#ignores the connection data
 /lib/connection_data.php
+#ignores the jetbrains settings
 /.idea/
