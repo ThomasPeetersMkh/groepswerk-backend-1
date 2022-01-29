@@ -138,4 +138,117 @@ table {
   box-sizing: border-box;
 }
 
+main .slider .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: "Noto Sans", sans-serif;
+  margin: 78px 40px 25px 40px;
+}
+header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0c0c0c;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+header nav {
+  display: flex;
+  gap: 20px;
+}
+header nav a {
+  text-decoration: none;
+  font-weight: 550;
+  font-size: 22px;
+  font-family: "Noto Sans", sans-serif;
+  color: #0c0c0c;
+}
+header nav a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+header nav .form {
+  width: 200px;
+  margin-top: -5px;
+  border: 1px solid #0c0c0c;
+  border-radius: 5px;
+  background-color: #dadada;
+}
+header nav .form input {
+  height: 90%;
+  width: 80%;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 550;
+  border-style: none;
+  border-radius: 5px;
+  color: #0c0c0c;
+  background-color: #dadada;
+}
+header nav .form input:focus {
+  outline: none;
+}
+
+main {
+  border-top: 1px solid #b7b7b7;
+  padding: 100px 0 100px 0;
+  border-bottom: 1px solid #b7b7b7;
+}
+main .slider {
+  min-width: 1700px;
+  display: flex;
+  justify-content: center;
+}
+main .slider .container {
+  width: 60%;
+  height: auto;
+  background-color: #bb8935;
+}
+main .slider .container .text {
+  max-width: 800px;
+  margin: 200px 0px 0 160px;
+  font-family: "Noto Serif", sans-serif;
+  color: #f9f9f9;
+}
+main .slider .container .text h2 {
+  font-size: 72px;
+  margin-bottom: 56px;
+}
+main .slider .container .text p {
+  font-size: 25px;
+  line-height: 60px;
+  margin-bottom: 50px;
+}
+main .slider .container .text button {
+  border-radius: 35px;
+  background-color: #bb8935;
+  border: 2px solid #f9f9f9;
+}
+main .slider .container .text button:hover {
+  border: none;
+  background-color: #f9f9f9;
+}
+main .slider .container .text button a {
+  display: block;
+  font-family: "Noto Serif", sans-serif;
+  font-size: 25px;
+  text-decoration: none;
+  color: #f9f9f9;
+  padding: 10px 100px 10px 100px;
+}
+main .slider .container .text button a:hover {
+  color: #bb8935;
+}
+main .slider .image {
+  aspect-ratio: 9/10;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -3,3 +3,111 @@
 @use "./BASE/fonts";
 @use "./BASE/mixins" as *;
 @use "./BASE/variables" as *;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: "Noto Sans", sans-serif;
+  margin: 78px 40px 25px 40px;
+  h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: $nearblack;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+    a {
+      text-decoration: none;
+      font-weight: 550;
+      font-size: 22px;
+      font-family: "Noto Sans", sans-serif;
+      color: #0c0c0c;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    .form {
+      width: 200px;
+      margin-top: -5px;
+      border: 1px solid $nearblack;
+      border-radius: 5px;
+      background-color: $lightergrey;
+      input {
+        height: 90%;
+        width: 80%;
+        font-family: "Noto Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 550;
+        border-style: none;
+        border-radius: 5px;
+        color: $nearblack;
+        background-color: $lightergrey;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+main {
+  border-top: 1px solid $lightgrey;
+  padding: 100px 0 100px 0;
+  border-bottom: 1px solid $lightgrey;
+  .slider {
+    min-width: 1700px;
+    display: flex;
+    justify-content: center;
+    .container {
+      width: 60%;
+      height: auto;
+      background-color: $gold;
+      .text {
+        max-width: 800px;
+        margin: 200px 0px 0 160px;
+        font-family: "Noto Serif", sans-serif;
+        color: $nearwhite;
+        h2 {
+          font-size: 72px;
+          margin-bottom: 56px;
+        }
+        p {
+          font-size: 25px;
+          line-height: 60px;
+          margin-bottom: 50px;
+        }
+        button {
+          border-radius: 35px;
+          background-color: $gold;
+          border: 2px solid $nearwhite;
+          &:hover {
+            border: none;
+            background-color: $nearwhite;
+          }
+          a {
+            display: block;
+            font-family: "Noto Serif", sans-serif;
+            font-size: 25px;
+            text-decoration: none;
+            color: $nearwhite;
+            padding: 10px 100px 10px 100px;
+            &:hover {
+              color: $gold;
+            }
+          }
+        }
+      }
+    }
+    .image {
+      aspect-ratio: 9/10;
+      object-fit: cover;
+      img {
+        @extend %img;
+      }
+    }
+  }
+}
