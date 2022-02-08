@@ -15,10 +15,9 @@ function PrintJumbo( $title = "", $subtitle = "" )
     print $jumbo;
 }
 
-function PrintNavbar( )
+function PrintHeader( )
 {
-    $navbar = file_get_contents("templates/navbar.html");
-
+    $navbar = file_get_contents("templates/header.html");
     print $navbar;
 }
 
