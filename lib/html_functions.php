@@ -21,6 +21,10 @@ function PrintHeader( )
     print $navbar;
 }
 
+function printCollection(){
+
+}
+
 function MergeViewWithData( $template, $data )
 {
     $returnvalue = "";
