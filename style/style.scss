@@ -1,0 +1,184 @@
+@use "./base/reset";
+@use "./base/extends";
+@use "./base/fonts";
+@use "./base/mixins" as *;
+@use "./base/variables" as *;
+@use "./icons/style";
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  header {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    h1 {
+      font-family: "Noto Sans";
+      font-size: 30px;
+      font-weight: 700;
+    }
+    nav {
+      ul {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        align-items: flex-end;
+        li {
+          a {
+            font-family: Noto Sans;
+            text-decoration: none;
+            color: black;
+            font-size: 17px;
+          }
+        }
+        form {
+          position: relative;
+          #search_term {
+            border: none;
+            background-color: $lightergrey;
+            border-radius: 2px;
+            padding-left: 5px;
+            padding-right: 19px;
+            width: 100px;
+            height: 17px;
+            &:focus {
+              outline: $lightgrey 1px solid;
+            }
+          }
+          #search_button {
+            border: none;
+            background-color: transparent;
+            position: absolute;
+            left: 77px;
+            top: 1px;
+            &::before {
+              content: "\e101";
+              font-family: icomoon;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    &.index {
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid black;
+      padding: 0px 20px;
+      .home {
+        display: flex;
+        padding: 10px 0px 20px 0px;
+        aside {
+          flex: 1 1 400px;
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+          justify-content: space-evenly;
+          background-color: $gold;
+          padding: 50px;
+          padding-right: 100px;
+          h2 {
+            color: $nearwhite;
+            font-family: Noto Sans;
+            font-weight: 400;
+            font-size: 50px;
+          }
+          p {
+            color: $nearwhite;
+            font-family: Noto Sans;
+            font-weight: 400;
+          }
+          form {
+            display: flex;
+            justify-content: center;
+            button {
+              border: $nearwhite 2px solid;
+              background-color: transparent;
+              color: $nearwhite;
+              width: 200px;
+              padding: 10px;
+              border-radius: 20px;
+            }
+          }
+        }
+        .imgHolder {
+          aspect-ratio: 3/5;
+          max-height: 850px;
+          flex: 1 1 400px;
+          img {
+            @extend %img;
+          }
+        }
+      }
+    }
+    &.collection {
+      display: flex;
+      gap: 20px;
+      aside {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        border-right: 1px $lightgrey solid;
+        padding: 10px;
+        h2 {
+          color: $nearblack;
+          font-family: Noto Sans;
+          font-weight: 700;
+          font-size: 25px;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          padding: 5px;
+          margin-bottom: 15px;
+          li {
+            color: $nearblack;
+            font-family: Noto Sans;
+            font-weight: 400;
+            font-size: 18px;
+          }
+        }
+      }
+      .showcase {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        .item {
+          position: relative;
+          flex-basis: 300px;
+          flex-grow: 1;
+          flex-shrink: 1;
+          object-fit: cover;
+          max-width: 300px;
+          img {
+            @extend %img;
+          }
+          .info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 8px;
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            h3 {
+              font-size: 40px;
+              color: $nearwhite;
+            }
+            p {
+              color: $gold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
