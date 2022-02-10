@@ -38,6 +38,16 @@ PrintHeader();
         $template = file_get_contents("templates/artist_item.html");
         //print data from Artiest
         PrintCollection($template,$data);
+
+        $search = $_GET["search_term"];
+        //get data from Kunst
+        $data = GetData( 'select kunst_naam, kunst_omschrijving, afb_path from Kunst inner join Afbeelding A on Kunst.kunst_id = A.kunst_id where kunst_naam like "%'.$search.'%"');
+        //get template from Kunst
+        $template = file_get_contents("templates/painting_item.html");
+        //print data from Kunst
+        PrintCollection($template,$data);
+
+
         ?>
     </div>
 
