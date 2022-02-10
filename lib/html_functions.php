@@ -22,27 +22,17 @@ function PrintHeader( )
     print $navbar;
 }
 
-function PrintCollection($type){
-    $returnpage = file_get_contents("templates/collection_start.html");
-    $item = file_get_contents("templates/collection_item.html");
-    switch ($type){
-        case 0:
-            $sql = "select kunst_naam,kunst_omschrijving,afb_path from Kunst inner join Afbeelding on Kunst.kunst_id = Afbeelding.kunst_id;";
-            break;
-    }
-    $data = GetData($sql);
+function PrintCollection($template, $data){
+    $returnpage = "";
     foreach ( $data as $row )
     {
-        $output = $item;
+        $output = $template;
         foreach( array_keys($row) as $field )  //eerst "img_id", dan "img_title", ...
         {
             $output = str_replace( "@$field@", $row["$field"], $output);
         }
         $returnpage .= $output;
     }
-
-    $returnpage .= file_get_contents("templates/collection_end.html");
-
     print $returnpage;
 
 }
