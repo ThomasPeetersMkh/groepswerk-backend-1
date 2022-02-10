@@ -32,11 +32,15 @@ PrintHeader();
         <?php
         //get data
         $data = GetData( "select kunst_naam,kunst_omschrijving,afb_path from Kunst inner join Afbeelding on Kunst.kunst_id = Afbeelding.kunst_id;" );
+        $rows = GetData("select * from Kunst");
 
         //get template
         $template = file_get_contents("templates/painting_item.html");
         //merge
         PrintCollection($template,$data);
+        foreach ($rows as $row){
+            print '<a href=painting.php?kunst_id=' . $row['kunst_id'] . '>Meer info</a>';
+        }
         ?>
     </div>
 
