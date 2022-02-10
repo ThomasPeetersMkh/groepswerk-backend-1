@@ -1,14 +1,11 @@
 <body>
-<header>
-    <h1>collectiONE</h1>
-    <nav>
-        <p><a href="./index.html">Home</a></p>
-        <p><a href="./paintings.html">Paintings</a></p>
-        <p><a href="./artists.html">Artists</a></p>
-        <div class="form">
-            <form action="search.php" method="get">
-                <input type="text" name="search" id="search" placeholder="Search" />
-            </form>
-        </div>
-    </nav>
-</header>
+<div class="container">
+    <header>
+        <h1>collectiONE</h1>
+        <nav><ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="collection.php?type=0">Paintings</a></li>
+            <li><a href="collection.php?type=1">Artists</a></li>
+            <form action="collection.php?type=3"><input type="text" name="search_term" id="search_term" placeholder="search..."><button id="search_button"></button></form>
+        </ul></nav>
+    </header>

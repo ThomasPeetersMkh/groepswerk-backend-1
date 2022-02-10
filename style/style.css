@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container main.index .home .imgHolder img, .container main.collection .showcase .item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.container main.index .home .imgHolder img, .container main.collection .showcase .item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("icons/fonts/icomoon.eot?c23ur5");
+  src: url("icons/fonts/icomoon.eot?c23ur5#iefix") format("embedded-opentype"), url("icons/fonts/icomoon.ttf?c23ur5") format("truetype"), url("icons/fonts/icomoon.woff?c23ur5") format("woff"), url("icons/fonts/icomoon.svg?c23ur5#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e101";
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.container header {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+.container header h1 {
+  font-family: "Noto Sans";
+  font-size: 30px;
+  font-weight: 700;
+}
+.container header nav ul {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.container header nav ul li a {
+  font-family: Noto Sans;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+.container header nav ul form {
+  position: relative;
+}
+.container header nav ul form #search_term {
+  border: none;
+  background-color: #dadada;
+  border-radius: 2px;
+  padding-left: 5px;
+  padding-right: 19px;
+  width: 100px;
+  height: 17px;
+}
+.container header nav ul form #search_term:focus {
+  outline: #b7b7b7 1px solid;
+}
+.container header nav ul form #search_button {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  left: 77px;
+  top: 1px;
+}
+.container header nav ul form #search_button::before {
+  content: "\e101";
+  font-family: icomoon;
+  color: black;
+}
+.container main.index {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  padding: 0px 20px;
+}
+.container main.index .home {
+  display: flex;
+  padding: 10px 0px 20px 0px;
+}
+.container main.index .home aside {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: space-evenly;
+  background-color: #bb8935;
+  padding: 50px;
+  padding-right: 100px;
+}
+.container main.index .home aside h2 {
+  color: #f9f9f9;
+  font-family: Noto Sans;
+  font-weight: 400;
+  font-size: 50px;
+}
+.container main.index .home aside p {
+  color: #f9f9f9;
+  font-family: Noto Sans;
+  font-weight: 400;
+}
+.container main.index .home aside form {
+  display: flex;
+  justify-content: center;
+}
+.container main.index .home aside form button {
+  border: #f9f9f9 2px solid;
+  background-color: transparent;
+  color: #f9f9f9;
+  width: 200px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.container main.index .home .imgHolder {
+  aspect-ratio: 3/5;
+  max-height: 850px;
+  flex: 1 1 400px;
+}
+.container main.collection {
+  display: flex;
+  gap: 20px;
+}
+.container main.collection aside {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-right: 1px #b7b7b7 solid;
+  padding: 10px;
+}
+.container main.collection aside h2 {
+  color: #0c0c0c;
+  font-family: Noto Sans;
+  font-weight: 700;
+  font-size: 25px;
+}
+.container main.collection aside ul {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+.container main.collection aside ul li {
+  color: #0c0c0c;
+  font-family: Noto Sans;
+  font-weight: 400;
+  font-size: 18px;
+}
+.container main.collection .showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.container main.collection .showcase .item {
+  position: relative;
+  flex-basis: 300px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  object-fit: cover;
+  max-width: 300px;
+}
+.container main.collection .showcase .item .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.container main.collection .showcase .item .info h3 {
+  font-size: 40px;
+  color: #f9f9f9;
+}
+.container main.collection .showcase .item .info p {
+  color: #bb8935;
+}
+
+/*# sourceMappingURL=style.css.map */
