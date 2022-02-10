@@ -1,3 +1,11 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+require_once "lib/autoload.php";
+PrintHead();
+PrintHeader();
+?>
 <main class="collection">
     <aside>
         <h2>Name</h2>
@@ -21,5 +29,21 @@
         </ul>
     </aside>
     <div class="showcase">
+        <?php
+        //get data
+        $data = GetData( "select kunst_naam,kunst_omschrijving,afb_path from Kunst inner join Afbeelding on Kunst.kunst_id = Afbeelding.kunst_id;" );
+
+        //get template
+        $template = file_get_contents("templates/painting_item.html");
+        //merge
+        PrintCollection($template,$data);
+        ?>
+    </div>
+
+</main>
+</div>
+</body>
+</html>
+
 
 
