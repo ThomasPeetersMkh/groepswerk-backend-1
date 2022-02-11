@@ -31,7 +31,7 @@ PrintHeader();
     <div class="showcase">
         <?php
         //get data
-        $data = GetData( "select artiest_achternaam, geboortedatum,sterftedatum from Artiest;" );
+        $data = GetData( "select artiest_id, artiest_achternaam, geboortedatum,sterftedatum from Artiest;" );
 
         //get template
         $template = file_get_contents("templates/artist_item.html");
