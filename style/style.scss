@@ -156,6 +156,9 @@
           flex-shrink: 1;
           object-fit: cover;
           max-width: 300px;
+          a {
+            text-decoration: none;
+          }
           img {
             @extend %img;
           }
@@ -177,6 +180,49 @@
               color: $gold;
             }
           }
+        }
+      }
+    }
+    &.detail {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px 10px 10px;
+      img {
+        @extend %img;
+        max-width: 450px;
+        flex: 1 1 320px;
+      }
+      aside {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-shrink: 1;
+        background-color: $bord;
+        padding: 15px;
+        gap: 15px;
+        h1 {
+          font-family: Noto Sans;
+          color: $nearwhite;
+          font-weight: 700;
+          font-size: 40px;
+        }
+        h2 {
+          font-family: Noto Sans;
+          color: $gold;
+          font-weight: 700;
+          font-size: 30px;
+        }
+        h3 {
+          font-family: Noto Sans;
+          color: $nearwhite;
+          font-weight: 400;
+          font-size: 25px;
+        }
+        p {
+          font-family: Noto Sans;
+          color: $gold;
+          font-weight: 400;
+          font-size: 20px;
         }
       }
     }

@@ -138,13 +138,13 @@ table {
   box-sizing: border-box;
 }
 
-.container main.index .home .imgHolder img, .container main.collection .showcase .item img {
+.container main.index .home .imgHolder img, .container main.collection .showcase .item img, .container main.detail img {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.container main.index .home .imgHolder img, .container main.collection .showcase .item img {
+.container main.index .home .imgHolder img, .container main.collection .showcase .item img, .container main.detail img {
   display: block;
   width: 100%;
   height: 100%;
@@ -325,6 +325,9 @@ table {
   object-fit: cover;
   max-width: 300px;
 }
+.container main.collection .showcase .item a {
+  text-decoration: none;
+}
 .container main.collection .showcase .item .info {
   position: absolute;
   top: 0;
@@ -342,6 +345,48 @@ table {
 }
 .container main.collection .showcase .item .info p {
   color: #bb8935;
+}
+.container main.detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 10px 10px;
+}
+.container main.detail img {
+  max-width: 450px;
+  flex: 1 1 320px;
+}
+.container main.detail aside {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: #572d2d;
+  padding: 15px;
+  gap: 15px;
+}
+.container main.detail aside h1 {
+  font-family: Noto Sans;
+  color: #f9f9f9;
+  font-weight: 700;
+  font-size: 40px;
+}
+.container main.detail aside h2 {
+  font-family: Noto Sans;
+  color: #bb8935;
+  font-weight: 700;
+  font-size: 30px;
+}
+.container main.detail aside h3 {
+  font-family: Noto Sans;
+  color: #f9f9f9;
+  font-weight: 400;
+  font-size: 25px;
+}
+.container main.detail aside p {
+  font-family: Noto Sans;
+  color: #bb8935;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

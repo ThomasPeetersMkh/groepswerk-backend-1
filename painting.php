@@ -8,28 +8,23 @@ PrintHeader();
 
 if ( ! is_numeric( $_GET["kunst_id"] ) ) die("Foutieve GET parameter!");
 
-$rows = GetData( "select kunst_naam, kunst_omschrijving from Kunst where kunst_id=" . $_GET["kunst_id"] );
+?>
+<main class="detail">
+    <?php
+    //getting data
+    $data = GetData( 'select artiest_voornaam,artiest_achternaam,kunst_naam,stijl_naam, kunst_omschrijving,afb_path from Artiest
+inner join Artiest_Kunst AK on Artiest.artiest_id = AK.artiest_id
+inner join Kunst K on AK.kunst_id = K.kunst_id
+inner join Afbeelding A on K.kunst_id = A.kunst_id
+inner join Stijl S on K.stijl_id = S.stijl_id where K.kunst_id="' . $_GET["kunst_id"].'";');
+    //get template
+    $template = file_get_contents("templates/painting_detail.html");
 
-/*
-$rows = GetData( "select kunst_naam, kunst_omschrijving, afb_path, artiest_voornaam, artiest_achternaam, stijl_naam
-from Kunst inner join Afbeelding on Kunst.kunst_id = Afbeelding.kunst_id
-inner join Artiest_Kunst on Kunst.kunst_id = Artiest_Kunst.kunst_id
-inner join Artiest on Artiest_Kunst.artiest_id = Artiest.artiest_id
-inner join Stijl on Kunst.stijl_id = Stijl.stijl_id where kunst_id=" . $_GET["kunst_id"] );
- */
+    //fill template with data
+    print MergeViewWithData($template,$data);
 
-foreach ($rows as $row){
-    print '<div class="showcase">';
-
-    //print naam kunstwerk + artiest naam + stijl + kunstomschrijving
-    print '<h3>' . $row['kunst_naam'] . '</h3>';
-    print '<h3>' . $row['artiest_voornaam'] . " " . $row['artiest_achternaam'] . '</h3>';
-    print '<h3>' . $row['stijl_naam'] . '</h3>';
-    print '<p>' . $row['kunst_omschrijving'] . '</p>';
-
-    //afbeelding
-    $link_image = "images/" . $row['afb_path'];
-    print '<img src="' . $link_image . '">';
-
-    print '</div>' ;
-}
+    ?>
+</main>
+</div>
+</body>
+</html>
