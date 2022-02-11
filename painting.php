@@ -16,7 +16,8 @@ if ( ! is_numeric( $_GET["kunst_id"] ) ) die("Foutieve GET parameter!");
 inner join Artiest_Kunst AK on Artiest.artiest_id = AK.artiest_id
 inner join Kunst K on AK.kunst_id = K.kunst_id
 inner join Afbeelding A on K.kunst_id = A.kunst_id
-inner join Stijl S on K.stijl_id = S.stijl_id where K.kunst_id="' . $_GET["kunst_id"].'";');
+inner join Stijl S on K.stijl_id = S.stijl_id 
+where K.kunst_id="' . $_GET["kunst_id"].'";');
     //get template
     $template = file_get_contents("templates/painting_detail.html");
 
