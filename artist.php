@@ -6,6 +6,7 @@ require_once "lib/autoload.php";
 PrintHead();
 PrintHeader();
 
+//check of artiest_id had a numeric value
 if ( ! is_numeric( $_GET["artiest_id"] ) ) die("Foutieve GET parameter!");
 
 ?>

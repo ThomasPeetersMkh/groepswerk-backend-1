@@ -30,11 +30,11 @@ PrintHeader();
     </aside>
     <div class="showcase">
         <?php
-        //organise $GET
+        //assign info from _$GET to separate variable for later use
         $search = $_GET["search_term"];
         //get data from Artiest
         $data = GetData( 'select artiest_achternaam, geboortedatum,sterftedatum from Artiest where artiest_achternaam like "%'.$search.'%" or artiest_voornaam like "%'.$search.'%"');
-        //get template from Artiest
+        //get template for
         $template = file_get_contents("templates/artist_item.html");
         //print data from Artiest
         PrintCollection($template,$data);
@@ -42,7 +42,7 @@ PrintHeader();
         $search = $_GET["search_term"];
         //get data from Kunst
         $data = GetData( 'select kunst_naam, kunst_omschrijving, afb_path from Kunst inner join Afbeelding A on Kunst.kunst_id = A.kunst_id where kunst_naam like "%'.$search.'%"');
-        //get template from Kunst
+        //get template for painting items
         $template = file_get_contents("templates/painting_item.html");
         //print data from Kunst
         PrintCollection($template,$data);
