@@ -46,7 +46,7 @@ function ExecuteSQL( $sql )
     global $conn;
 
     CreateConnection();
-
+    var_dump($sql );
     //define and execute query
     $result = $conn->query( $sql );
 

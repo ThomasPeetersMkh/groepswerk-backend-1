@@ -138,13 +138,13 @@ table {
   box-sizing: border-box;
 }
 
-.container main.index .home .imgHolder img, .container main.collection .showcase .item img, .container main.detail img {
+.container main.index .home .imgHolder img, .container main.collection .showcase .item img, .container main.detail img, .container main.fillform .imgHolder img {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.container main.index .home .imgHolder img, .container main.collection .showcase .item img, .container main.detail img {
+.container main.index .home .imgHolder img, .container main.collection .showcase .item img, .container main.detail img, .container main.fillform .imgHolder img {
   display: block;
   width: 100%;
   height: 100%;
@@ -387,6 +387,34 @@ table {
   color: #bb8935;
   font-weight: 400;
   font-size: 20px;
+}
+.container main.fillform {
+  display: flex;
+  padding: 0 10px 10px 10px;
+}
+.container main.fillform .imgHolder {
+  aspect-ratio: 3/4;
+  max-height: 850px;
+  flex: 1 1 400px;
+}
+.container main.fillform form {
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 50px;
+  background-color: #572d2d;
+}
+.container main.fillform form .row label {
+  color: #f9f9f9;
+  font-family: Noto Sans;
+  font-weight: 700;
+}
+.container main.fillform form .row input {
+  border: none;
+  background-color: #b7b7b7;
+  border-radius: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */
