@@ -1,0 +1,45 @@
+<form id="mainform" name="mainform" method="POST" action="lib/save.php">
+
+  <!-- meta info -->
+  <input type="hidden" id="table" name="table" value="Kunst">
+  <input type="hidden" id="pkey" name="pkey" value="kunst_id">
+  <input type="hidden" id="afterinsert" name="afterinsert" value="paintings.php">
+  <input type="hidden" id="afterupdate" name="afterupdate" value="paintings.php">
+  <!-- end meta info -->
+
+  <!--security-->
+  <input type="hidden" name="csrf" value="@csrf_token@">
+  <!--end security-->
+  <div class="row">
+    <label for="kunst_id">Id:</label>
+    <input type="text" readonly id="kunst_id" name="kunst_id" value="@kunst_id@">
+    @kunst_id_error@
+  </div>
+  <div class="row">
+    <label for="kunst_naam" class="col-sm-4 col-form-label">Painting Name:</label>
+    <input type="text" class="form-control-plaintext" id="kunst_naam" name="kunst_naam" value="@kunst_naam@">
+    @kunst_naam_error@
+  </div>
+
+
+  <div class="row">
+    <label for="stijl_id" class="col-sm-4 col-form-label">Stijl</label>
+    @select_stijl@
+    @stijl_id_error@
+  </div>
+
+  <div class="row">
+    <label for="kunst_omschrijving">Omschrijving:</label>
+    <input type="text" id="kunst_omschrijving" name="kunst_omschrijving" value="@kunst_omschrijving@">
+    @kunst_omschrijving_error@
+  </div>
+
+  <div class="row">
+    <label></label>
+    <input type="submit">
+  </div>
+
+</form>
+<div class="imgHolder">
+  <img alt="" src="images/@afb_path@">
+</div>

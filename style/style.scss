@@ -226,5 +226,39 @@
         }
       }
     }
+    &.fillform {
+      display: flex;
+      padding: 0 10px 10px 10px;
+      .imgHolder {
+        aspect-ratio: 3/4;
+        max-height: 850px;
+        flex: 1 1 400px;
+        img {
+          @extend %img;
+        }
+      }
+      form {
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 50px;
+        background-color: $bord;
+
+        .row {
+          label {
+            color: $nearwhite;
+            font-family: Noto Sans;
+            font-weight: 700;
+          }
+          input {
+            border: none;
+            background-color: $lightgrey;
+            border-radius: 2px;
+          }
+        }
+      }
+    }
   }
 }

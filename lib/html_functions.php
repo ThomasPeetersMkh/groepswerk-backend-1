@@ -1,5 +1,5 @@
 <?php
-include_once ("lib/autoload.php");
+include_once ("autoload.php");
 function PrintHead()
 {
     $head = file_get_contents("templates/head.html");
