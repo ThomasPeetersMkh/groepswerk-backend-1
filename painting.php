@@ -3,10 +3,11 @@ error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
 require_once "lib/autoload.php";
+//load in templates
 PrintHead();
 PrintHeader();
 
-//check of artiest_id had a numeric value
+//check of kunst_id had a numeric value
 if ( ! is_numeric( $_GET["kunst_id"] ) ) die("Foutieve GET parameter!");
 
 ?>

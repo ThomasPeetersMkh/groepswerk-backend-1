@@ -3,8 +3,10 @@ error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
 require_once "lib/autoload.php";
+//load in templates
 PrintHead();
 PrintHeader();
+
 //get data
 $data = GetData( "select * from Afbeelding where kunst_id=1" );
 
